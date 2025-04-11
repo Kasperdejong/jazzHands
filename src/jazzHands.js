@@ -79,6 +79,16 @@ function nextRound() {
 
 
 async function classifyCurrentHand() {
+    if (handLandmarks.length === 0 || handLandmarks[0].length === 0) {
+        console.warn('No hands detected');
+        failSound.play(); // Play the fail sound if no hands are detected
+
+        // Proceed to the next round even if no hand is detected
+        if (gameRunning) {
+            setTimeout(nextRound, 1500);
+        }
+        return;
+    }
     // Classify the current hand data using the neural network
     const results = await neuralNetwork.classify(normalizeHandData());
 
