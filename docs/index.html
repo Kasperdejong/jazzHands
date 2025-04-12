@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/svg+xml" href="/jazzHands/vite.svg"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jazzhands!</title>
+  <script type="module" crossorigin src="/jazzHands/assets/index-CCNAWAQX.js"></script>
+  <link rel="stylesheet" crossorigin href="/jazzHands/assets/index-B85eA6rb.css">
+</head>
+<body>
+<div id="app">
+  <h1>JazzHands</h1>
+  <h3>match your signs to the emoji</h3>
+  <h4>available hand signs:✋ 👊 👍 🤟 ✌️</h4>
+  <div style="position: relative; width: 640px; height: 480px; margin: 0 auto;">
+    <video id="input_video"
+           autoplay
+           playsinline
+           width="640"
+           height="480"
+           style="position: absolute; top: 0; left: 0; transform: scale(-1, 1); z-index: 0;"></video>
+    <div id="gesture-target" style="font-size: 4rem; z-index: 10; position: absolute; margin: 1rem; color: #fff;"></div>
+
+
+    <canvas id="hand_canvas"
+            width="640"
+            height="480"
+            style="position: absolute; top: 0; left: 0; border:1px solid #ccc; transform: scale(-1, 1); z-index: 1;"></canvas>
+  </div>
+
+
+  <div style="text-align: center; margin-top: 1rem; margin-bottom: 1rem;">
+    <button id="start-webcam" type="button">Play jazzHands!</button>
+  </div>
+
+
+</div>
+
+<script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
+
+</body>
+</html>
