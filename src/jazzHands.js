@@ -10,7 +10,7 @@ const video = document.getElementById('input_video');
 const canvas = document.getElementById('hand_canvas');
 const ctx = canvas.getContext('2d');
 const startWebcamButton = document.getElementById('start-webcam')
-const beginSound = new Audio('/sounds/charge.mp3');
+const beginSound = new Audio('https://kasperdejong.github.io/jazzHands/sounds/charge.mp3');
 
 
 const resultDisplay = document.getElementById('gesture-target');
